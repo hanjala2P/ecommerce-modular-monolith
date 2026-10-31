@@ -2,7 +2,19 @@ import prisma from "../../utlis/prisma";
 import AppError from "../../middleware/AppError";
 import { User } from "@prisma/client";
 
+
+// createUser
+const createUser = async (payload:prisma.UserCreateInput)=>{
+  
+}
+
+
+
+
+
 // 1. Create User
+
+ 
 const createUserIntoDB = async (payload: User) => {
   const existingUser = await prisma.user.findUnique({
     where: { email: payload.email },
